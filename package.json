@@ -11,6 +11,7 @@
   },
   "devDependencies": {},
   "scripts": {
+    "start": "node ./app/index.js",
     "test": "./node_modules/.bin/jasmine-node spec"
   },
   "repository": {
