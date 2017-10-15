@@ -1,6 +1,6 @@
 'use strict';
 describe('RomanNumberParser', function () {
-    var subject = require('../../lib/RomanNumberParser');
+    var subject = require('../../app/lib/RomanNumberParser');
 
     describe('parse', function () {
         var testCases = [

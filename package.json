@@ -1,0 +1,26 @@
+{
+  "name": "roman-number-parser",
+  "version": "1.0.0",
+  "description": "Service that takes an arabic number as an input and returns the number's roman version",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.16.2",
+    "jasmine": "^2.8.0",
+    "jasmine-node": "^1.14.5",
+    "request": "^2.83.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "./node_modules/.bin/jasmine-node spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yeikervazmol/roman-number-parser.git"
+  },
+  "author": "yeikervazmol@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yeikervazmol/roman-number-parser/issues"
+  },
+  "homepage": "https://github.com/yeikervazmol/roman-number-parser#readme"
+}
