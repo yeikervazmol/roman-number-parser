@@ -1,5 +1,6 @@
 'use strict';
-var BASE_ROMAN_NUMBERS_CASES = {
+const ROMAN_CHAR_FOR_ZERO = 'N';
+const BASE_ROMAN_NUMBERS_CASES = {
     '̅X': 10000,
     'M̅X': 9000,
     '̅V': 5000,
@@ -23,7 +24,7 @@ function parse(arabicNumber) {
     var parsedNumber = '';
 
     if (isEqualToZero(arabicNumber)) {
-        return 'N';
+        return ROMAN_CHAR_FOR_ZERO;
     }
 
     for (var romanNumber in BASE_ROMAN_NUMBERS_CASES) {
@@ -32,7 +33,7 @@ function parse(arabicNumber) {
             arabicNumber -= BASE_ROMAN_NUMBERS_CASES[romanNumber];
         }
 
-        if (isEqualToZero(arabicNumber)){
+        if (isEqualToZero(arabicNumber)) {
             break;
         }
     }

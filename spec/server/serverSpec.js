@@ -1,7 +1,6 @@
 'use strict';
 var request = require('request');
-
-var BASE_URL = 'http://localhost:3000/';
+const BASE_URL = 'http://localhost:3000/';
 
 describe('Roman Number Parser Server', function () {
     describe('GET/', function () {
@@ -40,6 +39,17 @@ describe('Roman Number Parser Server', function () {
             request.get(endpoint, function (error, response, body) {
                 // then
                 expect(response.statusCode).toBe(404);
+                done();
+            });
+        });
+
+        it('returns 400 when the number passed is not in the range 0-10000', function (done) {
+            var invalidNumber = '10001';
+            var endpoint = BASE_URL + 'number/' + invalidNumber;
+            // when
+            request.get(endpoint, function (error, response, body) {
+                // then
+                expect(response.statusCode).toBe(400);
                 done();
             });
         });
