@@ -33,6 +33,17 @@ describe('Roman Number Parser Server', function () {
             });
         });
 
+        it('returns 404 when an invalid parameter is passed', function (done) {
+            var invalidParameter = '123invalid-parameter';
+            var endpoint = BASE_URL + 'number/' + invalidParameter;
+            // when
+            request.get(endpoint, function (error, response, body) {
+                // then
+                expect(response.statusCode).toBe(404);
+                done();
+            });
+        });
+
         it('returns 404', function (done) {
             // when
             request.get(BASE_URL, function (error, response, body) {
